@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page header</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"
+     type="text/css">
+  </head>
+  <body style='background: silver'>
+
+    <div class="jumbotron">
+      <div class="container">
+        {% block content %}
+
+        {% endblock %}
+        <p>
+        <a href= "/" class="btn btn-success btn-lg">Main page</a>
+        <a href= "/news" class="btn btn-primary btn-lg"> News... &raquo; </a>
+        <a href= "/contact" class="btn btn-primary btn-lg"> Contacts &raquo; </a>
+        </p>
+      </div>
+      <div class="container">
+        <img src="{% static 'webexample/images/image1.jpg' %}" alt="Opss..." class="img-thumbnail">
+        <hr>
+        &copy; All right reserved 2021
+      </div>
+    </div>
+  </body>
+</html>
